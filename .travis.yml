@@ -6,4 +6,4 @@ before_install:
  - docker build -t gudavallis/docker-react -f Dockerfile.dev .
 
 script:
- - docker run gudavallis/docker-react npm run test -- --coverage
+ - docker run -e CI=true gudavallis/docker-react npm run test -- --coverage
